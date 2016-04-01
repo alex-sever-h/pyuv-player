@@ -419,11 +419,12 @@ wxPanel* pyuvFormatDialog::CreateExtraSettingsPage(wxWindow* parent)
     itemSizer8->Add(new wxStaticText(panel, wxID_ANY, _("Bits per sample:")), 0,
         wxALL|wxALIGN_CENTER_VERTICAL, 3);
 
-    itemSizer8->Add(3, 3, 1, wxALL, 0);
+    //    itemSizer8->Add(3, 3, 1, wxALL, 0);
 
-    bitpersampleText = new wxSpinCtrl(panel, wxID_ANY, wxString::Format(wxT("%d"), frame->GetSampleBits()),
-        wxDefaultPosition, wxSize(60, -1), wxTE_LEFT, 1, 16, frame->GetSampleBits());
-
+    bitpersampleText = new wxSpinCtrl(panel, wxID_ANY,
+                                      wxString::Format(wxT("%d"), frame->GetSampleBits()),
+                                      wxDefaultPosition,
+                                      wxSize(160, -1), wxTE_LEFT, 1, 16, frame->GetSampleBits());
     itemSizer8->Add(bitpersampleText, 0, wxALL|wxALIGN_CENTER_VERTICAL, 3);
 
     // Second row
